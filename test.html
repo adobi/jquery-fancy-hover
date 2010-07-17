@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng">
+<head>
+	<title>jQuery fancy hover</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.fancyHover.js"></script>
+	
+	<style type="text/css">
+		body {
+			margin: 0; padding:10px;
+			color:#444;
+			background: #fefefe;
+			font:12px Helvetica, Arial, sans-serif;
+		}
+
+		a {
+			color: #ff6908; text-decoration:none;font-size:1.2em; padding:3px;
+
+		}
+		
+		a:hover {
+			background: #ff6908; color:#fff;
+		}
+		
+		fieldset {
+			border:3px solid #f0f0f0;
+			padding:10px; margin:10px;
+			float:left;
+			width:700px;
+			
+		}
+		fieldset legend {
+			font-size:10px; color:#888;
+		}
+
+		.hidden {
+			display:none;
+		}
+		
+		div.fancy {
+		    float.left;
+		    border:3px solid #C8C8C8;
+		    width:110px;
+		    height: 110px;
+        	position:relative;
+        	display:inline-block;
+        	margin:20px;
+		}
+		
+		div.fancy-item {
+            width: 100px; height: 100px; 
+        	-ms-interpolation-mode: bicubic; 
+        	position: absolute;
+        	left: 0; top: 0;
+        	background:#f9f9f9;
+        	padding: 5px;
+        	font-size:18px;
+		}
+		div.fancy-item span {
+		    background:#ffffcc;
+            margin:0px auto!important;
+		}
+		
+		div.hover {
+		    border:5px solid #999;
+		    -moz-border-radius:10px;
+		    -webkit-border-radius:10px;
+		    background:#CEE3E6;
+		    font-size:24px;
+		}
+
+	</style>	
+</head>
+<body>
+	
+	<h1>jQuery fancy hover</h1>
+	
+	<fieldset class = "container">
+		<div class = "fancy"><div class = "fancy-item"><span>hello<span></div></div>
+	</fieldset>
+
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+		    
+		    var template = '<div class = "fancy"><div class = "fancy-item"></div></div>';
+		    
+		    for (var i = 0; i < 30; i++) {
+		        $('.container').append(template);
+		    }
+		   
+            $('.fancy').fancyHover({});
+		});
+	</script>
+	
+</body>
+</html>
