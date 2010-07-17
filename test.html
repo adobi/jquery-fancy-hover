@@ -14,7 +14,7 @@
 			background: #fefefe;
 			font:12px Helvetica, Arial, sans-serif;
 		}
-
+		
 		a {
 			color: #ff6908; text-decoration:none;font-size:1.2em; padding:3px;
 
@@ -39,7 +39,7 @@
 			display:none;
 		}
 		
-		div.fancy {
+		.fancy {
 		    float.left;
 		    border:3px solid #C8C8C8;
 		    width:110px;
@@ -47,9 +47,10 @@
         	position:relative;
         	display:inline-block;
         	margin:20px;
+        	cursor:pointer;
 		}
 		
-		div.fancy-item {
+		.fancy-item {
             width: 100px; height: 100px; 
         	-ms-interpolation-mode: bicubic; 
         	position: absolute;
@@ -58,23 +59,24 @@
         	padding: 5px;
         	font-size:18px;
 		}
-		div.fancy-item span {
+		.fancy-item span {
 		    background:#ffffcc;
-            margin:0px auto!important;
 		}
 		
-		div.hover {
+		.hover {
 		    border:5px solid #999;
 		    -moz-border-radius:10px;
 		    -webkit-border-radius:10px;
 		    background:#CEE3E6;
 		    font-size:24px;
+		    -webkit-box-shadow: 0px 3px 2px #ccc;
+            -moz-box-shadow: 0px 3px 2px #ccc;
 		}
 
 	</style>	
 </head>
 <body>
-	
+
 	<h1>jQuery fancy hover</h1>
 	
 	<fieldset class = "container">
@@ -85,9 +87,9 @@
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 		    
-		    var template = '<div class = "fancy"><div class = "fancy-item"></div></div>';
+		    var template = '<span class = "fancy"><span class = "fancy-item"></span></span>';
 		    
-		    for (var i = 0; i < 30; i++) {
+		    for (var i = 0; i < 11  ; i++) {
 		        $('.container').append(template);
 		    }
 		   

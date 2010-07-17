@@ -14,12 +14,12 @@
                     //$('body').css({'opacity': '0.2'});
                     $(this).find('.fancy-item').addClass("hover").stop() 
                 		.animate({
-                			marginTop: '-110px', 
-                			marginLeft: '-110px',
+                			marginTop: '-100px', 
+                			marginLeft: '-100px',
                 			top: '50%',
                 			left: '50%',
-                			width: '174px', 
-                			height: '174px', 
+                			width: '144px', 
+                			height: '144px', 
                 			padding: '20px'
                 		}, 200); 
                 },
